@@ -1,0 +1,11 @@
+Commands.....
+
+aws ec2 create-security-group --group-name newSecurityGroup --description "Demo" --vpc-id vpc-1f9b7d74
+
+aws ec2 authorize-security-group-ingress --group-name newSecurityGroup --protocol tcp --port 22 --cidr 0.0.0.0/0
+
+aws ec2 run-instances --image-id  ami-0e306788ff2473ccb --instance-type  t2.micro --security-group-ids {sg-015e9d81ee97c0ecb} --subnet-id subnet-b94d42d1 --count 1 --key-name newpass
+
+aws ec2 create-volume --size 1 --volume-type gp2 --availability-zone ap-south-1a 
+
+aws ec2 attach-volume --volume-id vol-080008bd824adc663  --instance-id i-0d8291a063a758488 --device /dev/sdf
