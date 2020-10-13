@@ -1,5 +1,7 @@
 Commands.....
 
+#Creating key Pair
+aws ec2 create-key-pair --key-name newpass
 
 #Creating Security-group  
 aws ec2 create-security-group --group-name newSecurityGroup --description "Demo" --vpc-id vpc-1f9b7d74
